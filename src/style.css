@@ -1,1 +1,48 @@
-@import "~bootstrap/dist/css/bootstrap.min.css";
+body {
+  background: green;
+}
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  margin-top: 10px;
+}
+#card {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+  background: white;
+  width: 250px;
+  height: 350px;
+  border-radius: 20px;
+  font-size: 75px;
+  margin: 10px 0;
+  padding: 10px;
+}
+#card .cardEmoji:first-child {
+  align-self: flex-start;
+}
+#card .cardEmoji:last-child {
+  align-self: flex-end;
+  transform: rotate(-180deg);
+}
+.heart .cardEmoji,
+.diamond .cardEmoji {
+  color: red;
+}
+.club .cardEmoji,
+.spade .cardEmoji {
+  color: black;
+}
+button {
+  width: fit-content;
+  font-size: 14px;
+  padding: 6px 12px;
+  text-align: center;
+  cursor: pointer;
+  border: 1px solid transparent;
+  border-radius: 14px;
+  margin: 10px 0;
+}
