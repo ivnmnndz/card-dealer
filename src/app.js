@@ -29,16 +29,20 @@ const getCard = () => {
     cardDiv.classList.remove(suite.name);
   });
   cardDiv.classList.add(randomSuite.name);
+  document.getElementById("cardInfo").innerHTML = randomValue;
 
   const cardEmojis = document.getElementsByClassName("cardEmoji");
   const cardEmojiArray = [...cardEmojis];
   cardEmojiArray.forEach(el => (el.innerHTML = randomSuite.symbol));
-  document.getElementById("cardInfo").innerHTML = `${randomValue}`;
 };
 
-getCard();
-document.querySelector("button").onclick = function() {
+const buttonElement = document.querySelector("input");
+buttonElement.addEventListener("click", function() {
+  getCard();
+});
+
+setInterval(getCard, [10000]);
+
+window.onload = function() {
   getCard();
 };
-
-window.onload = function() {};

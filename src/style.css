@@ -28,15 +28,17 @@ body {
   align-self: flex-end;
   transform: rotate(-180deg);
 }
-.heart .cardEmoji,
+
+/* .heart .cardEmoji,
 .diamond .cardEmoji {
   color: red;
 }
 .club .cardEmoji,
 .spade .cardEmoji {
   color: black;
-}
-button {
+} */
+
+input {
   width: fit-content;
   font-size: 14px;
   padding: 6px 12px;
